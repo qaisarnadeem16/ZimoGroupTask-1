@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
     return (
         <div
             style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 50 }}
-            onClick={onClick} >  <MdArrowForwardIos className=""/>
+            onClick={onClick} >  <MdArrowForwardIos className="md:block hidden"/>
         </div>
     );
 }
@@ -21,7 +21,7 @@ function SamplePrevArrow(props) {
     return (
         <div
             style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 100 }}
-            onClick={onClick} >  <MdArrowBackIos className="" />
+            onClick={onClick} >  <MdArrowBackIos className="md:block hidden" />
         </div>
     );
 }
