@@ -1,10 +1,11 @@
 
 import Slider from "react-slick";
 import { MdArrowLeft, MdArrowRight } from 'react-icons/md'
-import img1 from '../../public/asssets/p1.png'
-import img2 from '../../public/asssets/p2.png'
-import img3 from '../../public/asssets/p3.png'
-import img4 from '../../public/asssets/p4.png'
+import { AiOutlineShareAlt, AiFillHeart } from 'react-icons/ai'
+// import img1 from '../../public/asssets/p1.png'
+// import img2 from '../../public/asssets/p2.png'
+// import img3 from '../../public/asssets/p3.png'
+// import img4 from '../../public/asssets/p4.png'
 import logo from '../../public/asssets/logo.png'
 import company1 from '../../public/asssets/g12.png'
 import Image from 'next/image';
@@ -28,7 +29,7 @@ function InnerSliderPrevArrow(props) {
     return (
         <div
             style={{ display: "block", color: 'white ', fontSize: '3rem', backgroundColor: 'transparent', zIndex: '2', position: 'absolute', top: '13rem', left: 10 }}
-            onClick={onClick} >  <MdArrowLeft />
+            onClick={onClick} >  <MdArrowLeft   />
         </div>
     );
 }
@@ -64,21 +65,25 @@ const innerSlider = () => {
             <div className="container">
                 <Slider {...settings}>
                 {listings.map(listing => (
-                    <div key={listing.id} >
-                        <div className='relative rounded-[2rem]'>
-                            <div className=""> <img src={listing.img} alt=""  className="rounded-[1rem] w-[350px] h-[430px]" /></div>
+                    <div key={listing.id}  className='relative'>
+                        <div className='relative rounded-[2rem] overflow-hidden flex gap-5'>
+                            <div className=""> <img src={listing.img} alt=""  className="rounded-[1rem] lg:w-[350px] md:w-[320px] w-[350px] h-[430px] overflow-hidden" /></div>
 
-                            <div className="Timer absolute top-0 left-0 px-3 md:w-[95%] h-32 rounded-lg"></div>
-                            <div className="absolute top-0 left-0 px-5 pt-1">
+                            <div className="Timer absolute top-0 left-0 px-3 md:w-[95%] w-[95%] h-32 rounded-lg"></div>
+                            <div className="absolute w-full flex justify-center top-0 left-0 px-5 pt-1">
 
                             <Timer expireDate={new Date(listing.timer).getTime()}/>
 
                             </div>
+                            <div className="flex gap-3  justify-end absolute top-24 right-6 text-xl">
+                                <AiOutlineShareAlt className="text-white"/>
+                                <AiFillHeart className="text-[#B00000]"/>
+                            </div>
 
-                            <div className="Timer absolute bottom-0 left-0 px-3 w-[95%] h-32 rounded-lg"></div>
+                            <div className="Timer absolute bottom-0 left-0 px-3 md:w-[95%] w-[87%] h-32 rounded-lg"></div>
                             <div className="absolute bottom-2 px-5 text-white text-center">
-                                <span className=" text-center text-[13px]">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
-                                <div className="flex justify-between items-center">
+                                <span className=" text-center md:text-[13px] text-[12px]">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
+                                <div className="flex justify-between items-center pt-2">
                                     <Image src={logo} alt='' />
                                     <div className="flex flex-col">
                                         <span className="text-[10px]">€ 5,000,000 GPA</span>
@@ -88,11 +93,11 @@ const innerSlider = () => {
 
                                 </div>
                             </div>
-                            <div className="absolute bottom-5 right-24 rounded-full px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]"><span className="text-[8px]">23%</span></div>
+                            <div className="absolute bottom-5 right-24 rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]"><span className="text-[8px]">23%</span></div>
 
 
                         </div>
-                        <div className="relative mt-2 py-3 bg-black rounded-2xl w-[97%] text-white">
+                        <div className="relative mt-2 py-3 bg-black rounded-2xl w-[95%]  text-white">
                             <div className="flex justify-evenly text-[12px]">
                                 <span className="">€25.00 GBP</span>
                                 <span className="">BUY ENTRY NOW</span>

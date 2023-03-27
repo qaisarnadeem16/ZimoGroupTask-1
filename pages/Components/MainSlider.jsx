@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
     return (
         <div
             style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 50 }}
-            onClick={onClick} >  <MdArrowForwardIos />
+            onClick={onClick} >  <MdArrowForwardIos className=""/>
         </div>
     );
 }
@@ -20,8 +20,8 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div
-            style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '1', position: 'absolute', top: '-3rem', right: 100 }}
-            onClick={onClick} >  <MdArrowBackIos />
+            style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 100 }}
+            onClick={onClick} >  <MdArrowBackIos className="" />
         </div>
     );
 }
@@ -41,46 +41,46 @@ const MainSlider = () => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
-                }
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
             },
             {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
             },
             {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
             }
-        ]
+          ]
     };
 
     const sliderRef = useRef(null);
 
     const handleSwipe = (e, direction) => {
-      if (direction === 'left') {
-        sliderRef.current.slickNext();
-      } else {
-        sliderRef.current.slickPrev();
-      }
+        if (direction === 'left') {
+            sliderRef.current.slickNext();
+        } else {
+            sliderRef.current.slickPrev();
+        }
     };
 
 
     return (
         <>
-            <div className="container md:px-12 px-5 relative">
+            <div className="container md:px-12 px-5 relative ">
                 <div className="topbar py-5 flex justify-between ">
                     <div className="">
                         <span className="">FEATURED</span>
@@ -95,37 +95,32 @@ const MainSlider = () => {
                     </div>
                 </div>
 
-                <Slider {...settings}  ref={sliderRef} swipe onSwipe={handleSwipe}>
-                    <div>
-                        <InnerSlider />
-                    </div>
-                    <div>
-                        <InnerSlider />
+                <div className="">
+                    <Slider {...settings} ref={sliderRef} swipe onSwipe={handleSwipe} className=' '>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                        <div className=''>
+                            <InnerSlider />
+                        </div>
+                       
 
-                    </div>
-
-                    <div>
-                        <InnerSlider />
-
-                    </div>
-
-                    <div>
-                        <InnerSlider />
-
-                    </div>
-
-                    <div>
-                        <InnerSlider />
-
-                    </div>
-                    <div>
-                        <InnerSlider />
-
-                    </div>
-
-
-                </Slider>
+                    </Slider>
+                </div>
             </div>
+
         </>
     )
 }
