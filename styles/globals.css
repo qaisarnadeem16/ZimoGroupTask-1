@@ -18,20 +18,14 @@ body {
   opacity: .5;
 }
 
-.custom-dots {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 21rem;
-}
 
-.custom-dot {
-  margin: 0 1px;
-}
 
-.bar {
-  width: 8px;
-  height: 3px;
-  background-color: white;
-  margin: 0 2px;
+@media (min-width: 450px) and (max-width: 600px) {
+ .address{
+  padding: 0 2rem!important;
+  width: 100%;
+ }
+ .circle{
+  bottom: 4rem!important;
+ }
 }

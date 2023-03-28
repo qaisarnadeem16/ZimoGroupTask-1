@@ -9,8 +9,8 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
         <div
-            style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 50 }}
-            onClick={onClick} >  <MdArrowForwardIos className="md:block hidden" />
+            style={{  color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10',  }}
+            onClick={onClick} className="absolute top-[-1.5rem] right-[42%] md:top-[-3rem] md:right-10 ">  <MdArrowForwardIos  />
         </div>
     );
 }
@@ -18,8 +18,8 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div
-            style={{ display: "block", color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10', position: 'absolute', top: '-3rem', right: 100 }}
-            onClick={onClick} >  <MdArrowBackIos className="md:block hidden" />
+            style={{ color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10',}}
+            onClick={onClick}  className="absolute top-[-1.5rem] right-[49%] md:top-[-3rem] md:right-16 " >  <MdArrowBackIos />
         </div>
     );
 }
@@ -71,7 +71,7 @@ const MainSlider = () => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -93,13 +93,13 @@ const MainSlider = () => {
     return (
         <>
             <div className=" relative !w-full md:px-12 px-5">
-                <div className="topbar py-5 flex justify-between px-5">
+                <div className="topbar py-5 flex md:justify-between md:items-start flex-col md:flex-row items-center px-5">
                     <div className="tracking-[1px]">
-                        <span className="">FEATURED</span>
+                        <span className=" font-[300]">FEATURED</span>
                     </div>
 
-                    <div className="md:mr-28">
-                        <Link href=''><span className="text-black hover:text-blue-700">VIEW ALL HOME</span></Link>
+                    <div className="md:mr-28 pb-1">
+                        <Link href=''><span className="text-black hover:text-blue-700  font-[300] ">VIEW ALL HOME</span></Link>
                     </div>
 
                     <div className="arrow md:block hidden">
