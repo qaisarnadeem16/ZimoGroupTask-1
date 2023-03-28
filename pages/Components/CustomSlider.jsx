@@ -81,9 +81,9 @@ const CustomSlider = () => {
                                 size={24} />
                         </div>
 
-                        <div className="Timer absolute bottom-0 left-0 px-3 md:w-[100%] w-[87%] h-32 rounded-lg"></div>
+                        <div className="Timer absolute bottom-0 left-0 px-3 w-[100%]  h-32 rounded-lg"></div>
                         <div className="absolute bottom-2 px-5 text-white text-center">
-                            <span className=" text-center md:text-[13px] text-[12px] leading-[1px]">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
+                            <span className=" text-center md:text-[13px] text-[12px] leading-[1px] ">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
                             <div className="flex justify-between items-center pt-2">
                                 <Image src={logo} alt='' />
                                 <div className="flex flex-col">
@@ -94,9 +94,9 @@ const CustomSlider = () => {
 
                             </div>
                         </div>
-                        <div className="absolute bottom-5 right-24 rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]"><span className="text-[8px]">23%</span></div>
+                        <div className="absolute bottom-10 md:bottom-5 md:right-24 right-16 rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]"><span className="text-[8px]">23%</span></div>
 
-                        <div className="slider__dots absolute bottom-24 w-full flex justify-center">
+                        <div className="slider__dots absolute md:bottom-24 bottom-28 w-full flex justify-center">
                             {images.map((image, index) => (
                                 <Dot key={index} active={index === currentIndex} onClick={() => handleDotClick(index)} />
                             ))}
@@ -110,8 +110,8 @@ const CustomSlider = () => {
                         <span className="absolute bottom-0 right-4 text-[9px]  ">#ZM7861234567</span>
                     </div>
                     <div className="slider__controls">
-                        <button onClick={prevSlide} >   <MdArrowRight className="block text-white text-[3rem] absolute top-[9rem] right-3" /></button>
-                        <button onClick={nextSlide}>  <MdArrowLeft className="block text-white text-[3rem] absolute top-[9rem] left-3" />
+                        <button onClick={prevSlide} >   <MdArrowRight className="block text-white text-[3rem] absolute top-[11rem] right-3" /></button>
+                        <button onClick={nextSlide}>  <MdArrowLeft className="block text-white text-[3rem] absolute top-[11rem] left-3" />
                         </button>
                     </div>
 
