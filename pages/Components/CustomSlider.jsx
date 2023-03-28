@@ -6,6 +6,8 @@ import { MdArrowLeft, MdArrowRight } from 'react-icons/md'
 import { AiOutlineShareAlt, AiFillHeart } from 'react-icons/ai'
 import logo from '../../public/asssets/logo1.svg'
 import company1 from '../../public/asssets/g12.svg'
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 
 const Dot = ({ active, onClick }) => {
@@ -28,12 +30,20 @@ const CustomSlider = () => {
         id: listing.id,
         img: listing.first_image,
         timer: listing.expiry,
-        percentage:listing.percentage
+        percentage: listing.completion_percentage
     }));
 
     listings.forEach((listing) => {
         images.push(listing.img);
     });
+
+
+    const percentage = [];
+
+    listings.forEach((listing) => {
+        percentage.push(listing.percentage);
+    });
+    // console.log(percentage);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => {
@@ -83,9 +93,9 @@ const CustomSlider = () => {
                         </div>
 
                         <div className="Timer absolute bottom-0 left-0 px-3 w-[100%]  h-32 rounded-lg"></div>
-                        <div className="absolute bottom-2 px-5 text-white text-center address">
-                            <span className=" text-center md:text-[13px] text-[12px] leading-[1px]  ">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
-                            <div className="flex justify-between w-full items-center pt-2">
+                        <div className="absolute bottom-2 px-5 text-white text-center address ">
+                            <span className=" text-center md:text-[13px] text-[12px] !leading-1  ">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
+                            <div className="flex justify-between w-full items-center pt-4">
                                 <Image src={logo} alt='' />
                                 <div className="flex flex-col">
                                     <span className="text-[9px]  md:text-[10px]">€ 5,000,000 GPA</span>
@@ -95,10 +105,33 @@ const CustomSlider = () => {
 
                             </div>
                         </div>
-                        <div className="absolute bottom-10 md:bottom-5 md:right-24 right-10 circle rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]">
-                            {}<span className="text-[8px]">23%</span></div>
+                        <div className="absolute bottom-10 md:bottom-6 md:right-20 right-10 circle">
+                            {/* <span className="text-[8px]">23%</span> */}
+                            <CircularProgressbar
+                                className="w-7 h-7"
+                                value={percentage[0]}
+                                maxValue={1}
+                                text={`${percentage[0]}%`}
+                                styles={{
+                                    path: {
+                                        stroke: '#BE9F56',
+                                    },
+                                    trail: {
+                                        stroke: 'transparent',
+                                    },
+                                    text: {
+                                        fontSize: '2rem',
+                                        fill: '#fff',
+                                    },
+                                }}
+                            />
 
-                        <div className="slider__dots absolute md:bottom-24 bottom-28 w-full flex justify-center">
+
+
+                        </div>
+
+
+                        <div className="slider__dots absolute md:bottom-25 bottom-28 w-full flex justify-center">
                             {images.map((image, index) => (
                                 <Dot key={index} active={index === currentIndex} onClick={() => handleDotClick(index)} />
                             ))}

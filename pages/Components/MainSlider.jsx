@@ -57,6 +57,14 @@ const MainSlider = () => {
             {
                 breakpoint: 1180,
                 settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1020,
+                settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
