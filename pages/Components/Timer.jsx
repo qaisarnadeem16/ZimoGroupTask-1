@@ -29,7 +29,7 @@ const Timer = ({ expireDate }) => {
         <span>{timeLeft.days}</span>
       ) : (
         <>
-             <div className="text-white flex justify-between gap-10 sm:gap-7  font-normal    " >
+             <div className="text-white flex justify-between md:gap-10 sm:gap-7  gap-6 timerDiv  font-normal    " >
                                     <div className="flex flex-col gap-1 items-center ">
                                         <span className="text-[2.3rem] pb-1 font-[100] ">{timeLeft.days}</span>
                                         <span className="text-[8px] absolute bottom-0 tracking-wide font-[100]">DAYS</span>

@@ -28,4 +28,14 @@ body {
  .circle{
   bottom: 4rem!important;
  }
+ .timerDiv{
+  gap: 3rem;
+ }
 }
+
+@media (min-width: 1650) and (max-width: 1850) {
+  
+  .circle{
+   right: 0!important;
+  }
+ }

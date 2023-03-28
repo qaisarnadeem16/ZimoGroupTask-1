@@ -10,7 +10,7 @@ function SampleNextArrow(props) {
     return (
         <div
             style={{  color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10',  }}
-            onClick={onClick} className="absolute top-[-1.5rem] right-[42%] md:top-[-3rem] md:right-10 ">  <MdArrowForwardIos  />
+            onClick={onClick} className="absolute top-[-1.5rem] right-[45%] sm:top-[-3rem] sm:right-10 ">  <MdArrowForwardIos  />
         </div>
     );
 }
@@ -19,7 +19,7 @@ function SamplePrevArrow(props) {
     return (
         <div
             style={{ color: 'black ', fontSize: '1.5rem', backgroundColor: 'transparent', zIndex: '10',}}
-            onClick={onClick}  className="absolute top-[-1.5rem] right-[49%] md:top-[-3rem] md:right-16 " >  <MdArrowBackIos />
+            onClick={onClick}  className="absolute top-[-1.5rem] right-[50%] sm:top-[-3rem] sm:right-16 " >  <MdArrowBackIos />
         </div>
     );
 }
@@ -38,7 +38,7 @@ const MainSlider = () => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-                breakpoint: 1680,
+                breakpoint: 1880,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
@@ -50,12 +50,12 @@ const MainSlider = () => {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                
                 }
             },
 
             {
-                breakpoint: 1024,
+                breakpoint: 1180,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -93,7 +93,7 @@ const MainSlider = () => {
     return (
         <>
             <div className=" relative !w-full md:px-12 px-5">
-                <div className="topbar py-5 flex md:justify-between md:items-start flex-col md:flex-row items-center px-5">
+                <div className="topbar py-5 flex sm:justify-between sm:items-start flex-col sm:flex-row items-center px-5">
                     <div className="tracking-[1px]">
                         <span className=" font-[300]">FEATURED</span>
                     </div>
@@ -102,7 +102,7 @@ const MainSlider = () => {
                         <Link href=''><span className="text-black hover:text-blue-700  font-[300] ">VIEW ALL HOME</span></Link>
                     </div>
 
-                    <div className="arrow md:block hidden">
+                    <div className="arrow sm:block hidden">
             
                     </div>
                 </div>

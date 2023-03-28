@@ -28,6 +28,7 @@ const CustomSlider = () => {
         id: listing.id,
         img: listing.first_image,
         timer: listing.expiry,
+        percentage:listing.percentage
     }));
 
     listings.forEach((listing) => {
@@ -94,7 +95,8 @@ const CustomSlider = () => {
 
                             </div>
                         </div>
-                        <div className="absolute bottom-10 md:bottom-5 md:right-24 right-10 circle rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]"><span className="text-[8px]">23%</span></div>
+                        <div className="absolute bottom-10 md:bottom-5 md:right-24 right-10 circle rounded-full  px-1 text-center text-white border-b-2 border-r-2 border-[#BE9F56]">
+                            {}<span className="text-[8px]">23%</span></div>
 
                         <div className="slider__dots absolute md:bottom-24 bottom-28 w-full flex justify-center">
                             {images.map((image, index) => (
