@@ -29,24 +29,24 @@ const Timer = ({ expireDate }) => {
         <span>{timeLeft.days}</span>
       ) : (
         <>
-             <div className="text-white flex lg:gap-10 md:gap-7 gap-5  font-normal    ">
+             <div className="text-white flex  md:gap-6 gap-5  font-normal    ">
                                     <div className="flex flex-col gap-1 items-center ">
-                                        <span className="lg:text-[2rem] text-[1.5rem] font-[100] ">{timeLeft.days}</span>
-                                        <span className="text-[10px]">DAYS</span>
+                                        <span className="lg:text-[2.3rem] text-[1.5rem] pb-1 font-[100] ">{timeLeft.days}</span>
+                                        <span className="text-[10px] absolute bottom-0 tracking-wide font-[100]">DAYS</span>
                                     </div>
 
                                     <div className="flex flex-col gap-1 items-center">
-                                        <span className="lg:text-[2rem] text-[1.5rem] font-[100]">{timeLeft.hours}</span>
-                                        <span className="text-[10px]">HOURS</span>
+                                        <span className="lg:text-[2.3rem] text-[1.5rem] pb-1 font-[100]">{timeLeft.hours}</span>
+                                        <span className="text-[10px] absolute bottom-0 tracking-wide font-[100]">HOURS</span>
                                     </div>
 
                                     <div className="flex flex-col gap-1 items-center">
-                                        <span className="lg:text-[2rem] text-[1.5rem] font-[100]">{timeLeft.minutes}</span>
-                                        <span className="text-[10px]">MINUTES</span>
+                                        <span className="lg:text-[2.3rem] text-[1.5rem] pb-1 font-[100]">{timeLeft.minutes}</span>
+                                        <span className="text-[10px] absolute bottom-0 tracking-wide font-[100]">MINUTES</span>
                                     </div>
                                     <div className="flex flex-col gap-1 items-center">
-                                        <span className="lg:text-[2rem] text-[1.5rem] font-[100]">{timeLeft.seconds}</span>
-                                        <span className="text-[10px]">SECONDS</span>
+                                        <span className="lg:text-[2.3rem] text-[1.5rem] pb-1 font-[100]">{timeLeft.seconds}</span>
+                                        <span className="text-[10px] absolute bottom-0 tracking-wide font-[100]">SECONDS</span>
                                     </div>
                                 </div>
         </>
