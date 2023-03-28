@@ -60,7 +60,6 @@ const MainSlider = () => {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -94,17 +93,17 @@ const MainSlider = () => {
     return (
         <>
             <div className=" relative !w-full md:px-12 px-5">
-                <div className="topbar py-5 flex justify-between ">
-                    <div className="tracking-[2px]">
+                <div className="topbar py-5 flex justify-between px-5">
+                    <div className="tracking-[1px]">
                         <span className="">FEATURED</span>
                     </div>
 
-                    <div className="">
+                    <div className="md:mr-28">
                         <Link href=''><span className="text-black hover:text-blue-700">VIEW ALL HOME</span></Link>
                     </div>
 
                     <div className="arrow md:block hidden">
-
+            
                     </div>
                 </div>
                 <div className="">

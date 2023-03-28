@@ -4,8 +4,8 @@ import data from "../../public/data.json";
 import Timer from "./Timer";
 import { MdArrowLeft, MdArrowRight } from 'react-icons/md'
 import { AiOutlineShareAlt, AiFillHeart } from 'react-icons/ai'
-import logo from '../../public/asssets/logo.png'
-import company1 from '../../public/asssets/g12.png'
+import logo from '../../public/asssets/logo1.svg'
+import company1 from '../../public/asssets/g12.svg'
 
 
 const Dot = ({ active, onClick }) => {
@@ -64,9 +64,9 @@ const CustomSlider = () => {
             <div className="slider">
                 <div className='relative'>
                     <div className='relative rounded-[2rem] overflow-hidden flex gap-5 w-[95%]'>
-                        <div className=""> <img src={images[currentIndex]} alt="" className="rounded-[1rem]  w-[100%] h-[300px] overflow-hidden" /></div>
+                        <div className=""> <img src={images[currentIndex]} alt="" className="rounded-[1rem]  w-[100%] h-[400px] overflow-hidden" /></div>
 
-                        <div className="Timer absolute top-0 left-0 px-3 w-[90%] h-24 rounded-lg"></div>
+                        <div className="Timer absolute top-0 left-0 px-3 w-[100%] h-24 rounded-lg"></div>
                         <div className="absolute w-full flex justify-center top-0 left-0 px-5 pt-1">
 
 
@@ -81,14 +81,14 @@ const CustomSlider = () => {
                                 size={24} />
                         </div>
 
-                        <div className="Timer absolute bottom-0 left-0 px-3 md:w-[95%] w-[87%] h-32 rounded-lg"></div>
+                        <div className="Timer absolute bottom-0 left-0 px-3 md:w-[100%] w-[87%] h-32 rounded-lg"></div>
                         <div className="absolute bottom-2 px-5 text-white text-center">
                             <span className=" text-center md:text-[13px] text-[12px] leading-[1px]">SHELTON STREET CONVENT LONDON WC2H UNITED KINGDOM</span>
                             <div className="flex justify-between items-center pt-2">
                                 <Image src={logo} alt='' />
                                 <div className="flex flex-col">
-                                    <span className="text-[10px]">€ 5,000,000 GPA</span>
-                                    <span className="text-[6px] tracking-widest">#ZM7861234567</span>
+                                    <span className="text-[15px] md:text-[10px]">€ 5,000,000 GPA</span>
+                                    <span className="text-[10px] md:text-[7px] tracking-widest">#ZM7861234567</span>
                                 </div>
                                 <Image src={company1} alt='' width={60} />
 
