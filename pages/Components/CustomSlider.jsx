@@ -87,7 +87,7 @@ const CustomSlider = () => {
                             <div className="flex justify-between items-center pt-2">
                                 <Image src={logo} alt='' />
                                 <div className="flex flex-col">
-                                    <span className="text-[15px] md:text-[10px]">€ 5,000,000 GPA</span>
+                                    <span className="text-[13px] md:text-[10px]">€ 5,000,000 GPA</span>
                                     <span className="text-[10px] md:text-[7px] tracking-widest">#ZM7861234567</span>
                                 </div>
                                 <Image src={company1} alt='' width={60} />
@@ -103,15 +103,15 @@ const CustomSlider = () => {
                         </div>
                     </div>
                     <div className="relative mt-2 py-3 bg-black rounded-2xl w-[95%]  text-white">
-                        <div className="flex ml-7 gap-12 text-[14px] font-[200]">
+                        <div className="flex ml-7 gap-12 text-[14px]  font-[200]">
                             <span className="">€25.00 GBP</span>
                             <span className="">BUY ENTRY NOW</span>
                         </div>
                         <span className="absolute bottom-0 right-4 text-[9px]  ">#ZM7861234567</span>
                     </div>
                     <div className="slider__controls">
-                        <button onClick={prevSlide} >   <MdArrowRight className="block text-white text-[3rem] absolute top-[11rem] right-3" /></button>
-                        <button onClick={nextSlide}>  <MdArrowLeft className="block text-white text-[3rem] absolute top-[11rem] left-3" />
+                        <button onClick={nextSlide} > <MdArrowRight className="block text-white text-[3rem] absolute top-[11rem] right-3" /></button>
+                        <button onClick={prevSlide}>  <MdArrowLeft className="block text-white text-[3rem] absolute top-[11rem] left-3" />
                         </button>
                     </div>
 
