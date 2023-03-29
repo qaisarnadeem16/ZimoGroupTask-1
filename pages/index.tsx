@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import MainSlider from './Components/MainSlider'
+import Signture from './Components/Signture'
 import { Inter } from 'next/font/google'
 
 // If loading a variable font, you don't need to specify the font weight
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <main  className={inter.className}>
        <MainSlider/>
+       <Signture/>
       </main>
     </>
   )
