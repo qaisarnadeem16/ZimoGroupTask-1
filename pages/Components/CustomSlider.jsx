@@ -75,7 +75,7 @@ const CustomSlider = () => {
             <div className="slider">
                 <div className='relative'>
                     <div className='relative md:rounded-[1rem] rounded-[.5rem] overflow-hidden flex gap-5 w-[95%] mx-auto'>
-                        <div className=""> <img src={images[currentIndex]} alt="" className="rounded-[1rem]  w-[100%] h-[400px] overflow-hidden" /></div>
+                        <div className=""> <img src={images[currentIndex]} alt="" className="rounded-[1rem]  w-[100%] h-[400px] overflow-hidden object-cover" /></div>
 
                         <div className="Timer absolute top-0 left-0 px-3 w-[100%] h-24 rounded-lg"></div>
                         <div className="absolute w-full flex justify-center top-0 left-0 px-5 pt-1">
@@ -85,7 +85,7 @@ const CustomSlider = () => {
 
 
                         </div>
-                        <div className="flex gap-3  justify-end absolute top-24 right-6 text-xl">
+                        <div className="flex gap-3  justify-end items-center absolute top-24 right-6 text-xl">
                             <AiOutlineShareAlt className="text-white" />
                             <AiFillHeart className="" onClick={toggleColor}
                                 color={isRed ? "#B00000" : "white"}
