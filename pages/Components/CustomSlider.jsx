@@ -13,9 +13,9 @@ import 'react-circular-progressbar/dist/styles.css';
 const Dot = ({ active, onClick }) => {
     const style = {
         cursor: "pointer",
-        height: "2px",
+        height: "3px",
         width: "15px",
-        backgroundColor: active ? "grey" : "white",
+        backgroundColor: active ? "#BE9F56" : "white",
         margin: "0 3px",
         display: "inline-block"
     };
@@ -105,7 +105,7 @@ const CustomSlider = () => {
 
                             </div>
                         </div>
-                        <div className="absolute bottom-10 md:bottom-6 md:right-20 right-10 circle">
+                        <div className="absolute bottom-8 md:bottom-4 md:right-20 px-2 right-10 circle">
                             {/* <span className="text-[8px]">23%</span> */}
                             <CircularProgressbar
                                 className="w-7 h-7"
@@ -137,7 +137,7 @@ const CustomSlider = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="relative mt-2 py-3 bg-black rounded-2xl w-[95%]  text-white">
+                    <div className="relative mt-2 py-3 bg-black rounded-2xl w-[95%] mx-auto text-white">
                         <div className="flex mx-7 justify-between text-[14px]  font-[200]">
                             <span className="">€25.00 GBP</span>
                             <span className="">BUY ENTRY NOW</span>

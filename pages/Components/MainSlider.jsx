@@ -28,6 +28,8 @@ function SamplePrevArrow(props) {
 
 const MainSlider = () => {
     var settings = {
+        touchThreshold:200,
+        speed:500,
         dots: false,
         infinite: false,
         speed: 500,
@@ -45,7 +47,7 @@ const MainSlider = () => {
                 }
             },
             {
-                breakpoint: 1224,
+                breakpoint: 1324,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -87,27 +89,27 @@ const MainSlider = () => {
             }
         ]
     };
-    const sliderRef = useRef(null);
+    // const sliderRef = useRef(null);
 
-    const handleSwipe = (e, direction) => {
-        if (direction === 'left') {
-            sliderRef.current.slickNext();
-        } else {
-            sliderRef.current.slickPrev();
-        }
-    };
+    // const handleSwipe = (e, direction) => {
+    //     if (direction === 'left') {
+    //         sliderRef.current.slickNext();
+    //     } else {
+    //         sliderRef.current.slickPrev();
+    //     }
+    // };
 
 
     return (
         <>
             <div className=" relative !w-full md:px-12 px-5">
-                <div className="topbar py-5 flex sm:justify-between sm:items-start flex-col sm:flex-row items-center px-5">
-                    <div className="tracking-[1px]">
+                <div className="topbar py-5 flex sm:justify-between sm:items-start flex-col sm:flex-row items-center px-5 tracking-[2px]">
+                    <div className="">
                         <span className=" font-[300]">FEATURED</span>
                     </div>
 
                     <div className="md:mr-28 pb-1">
-                        <Link href=''><span className="text-black hover:text-blue-700  font-[300] ">VIEW ALL HOME</span></Link>
+                        <Link href=''><span className="text-black hover:text-[#BE9F56]  font-[300] ">VIEW ALL HOME</span></Link>
                     </div>
 
                     <div className="arrow sm:block hidden">
@@ -115,7 +117,7 @@ const MainSlider = () => {
                     </div>
                 </div>
                 <div className="">
-                    <Slider {...settings} ref={sliderRef} swipe onSwipe={handleSwipe} className=''>
+                    <Slider {...settings}  className=''>
                         <div className='shrink-0  '>
                             <CustomSlider />
                         </div>

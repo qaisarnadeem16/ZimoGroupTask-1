@@ -32,21 +32,21 @@ const Timer = ({ expireDate }) => {
              <div className="text-white flex justify-between md:gap-8 sm:gap-7  gap-6 timerDiv  font-normal    " >
                                     <div className="flex flex-col gap-1 items-center ">
                                         <span className="text-[2.3rem] pb-1 font-[100] ">{timeLeft.days}</span>
-                                        <span className="text-[8px] absolute bottom-0 tracking-wide font-[100]">DAYS</span>
+                                        <span className="text-[8px] absolute bottom-0 tracking-[1px] font-[100]">DAYS</span>
                                     </div>
 
                                     <div className="flex flex-col gap-1 items-center">
                                         <span className="text-[2.3rem]  pb-1 font-[100]">{timeLeft.hours}</span>
-                                        <span className="text-[8px] absolute bottom-0 tracking-wide font-[100]">HOURS</span>
+                                        <span className="text-[8px] absolute bottom-0 tracking-[1px] font-[100]">HOURS</span>
                                     </div>
 
                                     <div className="flex flex-col gap-1 items-center">
                                         <span className="text-[2.3rem]  pb-1 font-[100]">{timeLeft.minutes}</span>
-                                        <span className="text-[8px] absolute bottom-0 tracking-wide font-[100]">MINUTES</span>
+                                        <span className="text-[8px] absolute bottom-0 tracking-[1px] font-[100]">MINUTES</span>
                                     </div>
                                     <div className="flex flex-col gap-1 items-center">
                                         <span className="text-[2.3rem]  pb-1 font-[100]">{timeLeft.seconds}</span>
-                                        <span className="text-[8px] absolute bottom-0 tracking-wide font-[100]">SECONDS</span>
+                                        <span className="text-[8px] absolute bottom-0 tracking-[1px] font-[100]">SECONDS</span>
                                     </div>
                                 </div>
         </>
