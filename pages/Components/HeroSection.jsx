@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import {BiArrowBack} from 'react-icons/bi'
-import arrow from '../../public/asssets/path 59.svg'
+import arrow from '../../public/asssets/arrow.svg'
 
 
 const HeroSection = () => {
