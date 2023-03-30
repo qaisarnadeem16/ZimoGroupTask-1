@@ -41,7 +41,8 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        // Update time every 1 minute
+        // Update time every 1,1 minute
+
         const interval = setInterval(() => {
             setTime(moment());
         }, 60000);
