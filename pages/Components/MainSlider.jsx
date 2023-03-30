@@ -89,20 +89,11 @@ const MainSlider = () => {
             }
         ]
     };
-    // const sliderRef = useRef(null);
-
-    // const handleSwipe = (e, direction) => {
-    //     if (direction === 'left') {
-    //         sliderRef.current.slickNext();
-    //     } else {
-    //         sliderRef.current.slickPrev();
-    //     }
-    // };
 
 
     return (
         <>
-            <div className=" relative !w-full md:px-12 px-5">
+            <div className=" relative !w-full md:px-12 px-5" id='mainSlider'>
                 <div className="topbar py-5 flex sm:justify-between sm:items-start flex-col sm:flex-row items-center px-5 tracking-[2px]">
                     <div className="">
                         <span className=" font-[300]">FEATURED</span>

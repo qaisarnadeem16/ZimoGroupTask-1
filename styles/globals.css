@@ -18,16 +18,22 @@ body {
   opacity: .5;
 }
 
-
-
+.topSection{
+  background: url(../public/asssets/2023-01-19_22-48-19.svg);
+  background-position: center;
+  background-size: cover;
+}
+.scale-down:hover{
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  
+}
 @media (min-width: 450px) and (max-width: 600px) {
  .address{
   padding: 0 2rem!important;
   width: 100%;
  }
- .circle{
-  /* bottom: 4rem!important; */
- }
+
  .timerDiv{
   gap: 3rem;
  }
