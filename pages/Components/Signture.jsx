@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas';
 import {jsPDF } from 'jspdf';
+// import pdf from '/file.pdf'
 
 const Signture = () => {
 
@@ -20,7 +21,7 @@ const Signture = () => {
 
     
         const handleClick = () => {
-          window.open('../../public/Resume.pdf', '_blank');
+          window.open('/sample.pdf', '_blank');
         }
 
         return (
@@ -40,7 +41,8 @@ const Signture = () => {
 
                         <button onClick={handleClick}    className="bg-red-500 hover:bg-red-700 text-white font-bold  px-4 rounded">  Open PDF </button>
                         
-
+                         <a rel='noreferrer' href={"/file.pdf"} onClick={handleDownload}  target='_blank' >open</a>
+                                       
                     </div>
                 </div>
 
