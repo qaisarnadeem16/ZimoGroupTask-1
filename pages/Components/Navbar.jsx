@@ -45,7 +45,7 @@ const Navbar = () => {
 
         const interval = setInterval(() => {
             setTime(moment());
-        }, 60000);
+        }, 40000);
         return () => clearInterval(interval);
     }, []);
 
