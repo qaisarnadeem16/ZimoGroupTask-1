@@ -2,10 +2,9 @@ import Head from 'next/head'
 import MainSlider from './Components/MainSlider'
 import Signture from './Components/Signture'
 import TopSection from './Components/TopSection'
-import ImagesDragDrop from './Components/ImagesDragDrop'
+import DragAndDropSec from './Components/DragAndDropSec'
 import { Inter } from 'next/font/google'
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ['latin'] })
@@ -21,11 +20,7 @@ export default function Home() {
       <main className={inter.className}>
       
         <TopSection />
-
-        <DndProvider backend={HTML5Backend}>
-          <ImagesDragDrop />
-        </DndProvider>
-
+        <DragAndDropSec/>
         <MainSlider />
         <Signture />
       </main>
