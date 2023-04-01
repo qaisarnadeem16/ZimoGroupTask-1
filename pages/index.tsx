@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import MainSlider from './Components/MainSlider'
-import Signture from './Components/Signture'
+// import MainSlider from './Components/MainSlider'
+// import Signture from './Components/Signture'
 import TopSection from './Components/TopSection'
-import DragAndDropSec from './Components/DragAndDropSec'
+import SecondSection from './Components/SecondSection'
+import ThirdSection from './Components/ThirdSection'
+import FourthSection from './Components/FourthSection'
+// import DragAndDropSec from './Components/DragAndDropSec'
 import { Inter } from 'next/font/google'
 
 
@@ -20,9 +23,13 @@ export default function Home() {
       <main className={inter.className}>
       
         <TopSection />
-        <DragAndDropSec/>
-        <MainSlider />
-        <Signture />
+        <SecondSection/>
+        <ThirdSection/>
+        <FourthSection/>
+
+        {/* <DragAndDropSec/> */}
+        {/* <MainSlider />
+        <Signture /> */}
       </main>
     </>
   )

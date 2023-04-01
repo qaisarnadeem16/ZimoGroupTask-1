@@ -37,51 +37,51 @@ const ImagesDragDrop = () => {
     });
   };
 
-  const ImageItem = ({ id, src, index }) => {
-    const [{ isDragging }, drag] = useDrag(() => ({
-      type: 'IMAGE_ITEM',
-      item: { id, index },
-      collect: (monitor) => ({
-        isDragging: monitor.isDragging(),
-      }),
-    }));
+  // const ImageItem = ({ id, src, index }) => {
+  //   const [{ isDragging }, drag] = useDrag(() => ({
+  //     type: 'IMAGE_ITEM',
+  //     item: { id, index },
+  //     collect: (monitor) => ({
+  //       isDragging: monitor.isDragging(),
+  //     }),
+  //   }));
 
-    const [{ isOver }, drop] = useDrop(() => ({
-      accept: 'IMAGE_ITEM',
-      drop: (item) => {
-        const dragIndex = item.index;
-        const hoverIndex = index;
-        if (dragIndex === hoverIndex) {
-          return;
-        }
-        moveImageItem(dragIndex, hoverIndex);
-        item.index = hoverIndex;
-      },
-      collect: (monitor) => ({
-        isOver: monitor.isOver(),
-      }),
-    }));
+  //   const [{ isOver }, drop] = useDrop(() => ({
+  //     accept: 'IMAGE_ITEM',
+  //     drop: (item) => {
+  //       const dragIndex = item.index;
+  //       const hoverIndex = index;
+  //       if (dragIndex === hoverIndex) {
+  //         return;
+  //       }
+  //       moveImageItem(dragIndex, hoverIndex);
+  //       item.index = hoverIndex;
+  //     },
+  //     collect: (monitor) => ({
+  //       isOver: monitor.isOver(),
+  //     }),
+  //   }));
 
-    return (
-      <div
-        ref={drop}
-        className="md:w-1/4 sm:w-1/2 w-full  h-1/4 p-2 border-2 border-gray-300 rounded-lg flex items-center justify-center"
-        style={{ opacity: isDragging ? 0.5 : 1, backgroundColor: isOver ? '#FCD34D' : 'white' }}
-      >
-        <Image ref={drag} src={src} alt="Image" />
-      </div>
-    );
-  };
+  //   return (
+  //     <div
+  //       ref={drop}
+  //       className="md:w-1/4 sm:w-1/2 w-full  h-1/4 p-2 border-2 border-gray-300 rounded-lg flex items-center justify-center"
+  //       style={{ opacity: isDragging ? 0.5 : 1, backgroundColor: isOver ? '#FCD34D' : 'white' }}
+  //     >
+  //       <Image ref={drag} src={src} alt="Image" />
+  //     </div>
+  //   );
+  // };
 
   return (
     <>
-        <h1 className="text-xl text-black font-bold text-center p-3">Images Drag and Drop</h1>
+        {/* <h1 className="text-xl text-black font-bold text-center p-3">Images Drag and Drop</h1>
   
     <div className="flex  flex-col sm:flex-row gap-4 p-5">
       {imageItems.map((imageItem, index) => (
         <ImageItem key={imageItem.id} id={imageItem.id} src={imageItem.src} index={index} />
       ))}
-    </div>
+    </div> */}
     </>
   );
 };
